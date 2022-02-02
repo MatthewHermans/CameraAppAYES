@@ -8,17 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		EEC696EE27A28BC4007BC6FD /* CameraAppAYESApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC696ED27A28BC4007BC6FD /* CameraAppAYESApp.swift */; };
-		EEC696F027A28BC4007BC6FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC696EF27A28BC4007BC6FD /* ContentView.swift */; };
+		EEC696F027A28BC4007BC6FD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC696EF27A28BC4007BC6FD /* Home.swift */; };
 		EEC696F227A28BC5007BC6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEC696F127A28BC5007BC6FD /* Assets.xcassets */; };
 		EEC696F527A28BC5007BC6FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEC696F427A28BC5007BC6FD /* Preview Assets.xcassets */; };
+		EEC696FD27A28C04007BC6FD /* AYES_classification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EEC696FC27A28C04007BC6FD /* AYES_classification.mlmodel */; };
+		EEC6970B27A293E2007BC6FD /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6970A27A293E2007BC6FD /* AlertItem.swift */; };
+		EEC6970E27A2A1E4007BC6FD /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6970D27A2A1E4007BC6FD /* CameraView.swift */; };
+		EEC6971327A5252A007BC6FD /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6971227A5252A007BC6FD /* CameraViewModel.swift */; };
+		EEC6971527A7E4EA007BC6FD /* ObjectRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6971427A7E4EA007BC6FD /* ObjectRecognizer.swift */; };
+		EEC6971727A84E65007BC6FD /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6971627A84E65007BC6FD /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EEC696EA27A28BC4007BC6FD /* CameraAppAYES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraAppAYES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC696ED27A28BC4007BC6FD /* CameraAppAYESApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppAYESApp.swift; sourceTree = "<group>"; };
-		EEC696EF27A28BC4007BC6FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EEC696EF27A28BC4007BC6FD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		EEC696F127A28BC5007BC6FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEC696F427A28BC5007BC6FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EEC696FC27A28C04007BC6FD /* AYES_classification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AYES_classification.mlmodel; sourceTree = "<group>"; };
+		EEC6970A27A293E2007BC6FD /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		EEC6970C27A29755007BC6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EEC6970D27A2A1E4007BC6FD /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		EEC6971227A5252A007BC6FD /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		EEC6971427A7E4EA007BC6FD /* ObjectRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecognizer.swift; sourceTree = "<group>"; };
+		EEC6971627A84E65007BC6FD /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				EEC696ED27A28BC4007BC6FD /* CameraAppAYESApp.swift */,
-				EEC696EF27A28BC4007BC6FD /* ContentView.swift */,
+				EEC6970C27A29755007BC6FD /* Info.plist */,
+				EEC6970927A293CD007BC6FD /* Utilities */,
+				EEC696FE27A28CCB007BC6FD /* Screens */,
+				EEC696FB27A28BDE007BC6FD /* CoreML */,
 				EEC696F127A28BC5007BC6FD /* Assets.xcassets */,
 				EEC696F327A28BC5007BC6FD /* Preview Content */,
 			);
@@ -65,6 +81,50 @@
 				EEC696F427A28BC5007BC6FD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EEC696FB27A28BDE007BC6FD /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				EEC696FC27A28C04007BC6FD /* AYES_classification.mlmodel */,
+				EEC6971427A7E4EA007BC6FD /* ObjectRecognizer.swift */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		EEC696FE27A28CCB007BC6FD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EEC696FF27A28CDC007BC6FD /* Views */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EEC696FF27A28CDC007BC6FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEC6970627A29236007BC6FD /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EEC6970627A29236007BC6FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EEC6971227A5252A007BC6FD /* CameraViewModel.swift */,
+				EEC696EF27A28BC4007BC6FD /* Home.swift */,
+				EEC6970D27A2A1E4007BC6FD /* CameraView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EEC6970927A293CD007BC6FD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EEC6970A27A293E2007BC6FD /* AlertItem.swift */,
+				EEC6971627A84E65007BC6FD /* HapticManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC696F027A28BC4007BC6FD /* ContentView.swift in Sources */,
+				EEC696F027A28BC4007BC6FD /* Home.swift in Sources */,
+				EEC696FD27A28C04007BC6FD /* AYES_classification.mlmodel in Sources */,
+				EEC6971727A84E65007BC6FD /* HapticManager.swift in Sources */,
 				EEC696EE27A28BC4007BC6FD /* CameraAppAYESApp.swift in Sources */,
+				EEC6971327A5252A007BC6FD /* CameraViewModel.swift in Sources */,
+				EEC6970E27A2A1E4007BC6FD /* CameraView.swift in Sources */,
+				EEC6970B27A293E2007BC6FD /* AlertItem.swift in Sources */,
+				EEC6971527A7E4EA007BC6FD /* ObjectRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +338,8 @@
 				DEVELOPMENT_TEAM = AGPD9WY5RU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraAppAYES/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "for this app to run we need to have camera acces";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +369,8 @@
 				DEVELOPMENT_TEAM = AGPD9WY5RU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraAppAYES/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "for this app to run we need to have camera acces";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

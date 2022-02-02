@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import AVKit
 
 @main
 struct CameraAppAYESApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
         }
     }
 }
